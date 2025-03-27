@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Aryan Patel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#0f172a',
+            accent: '#22d3ee'
+          },
+          borderRadius: {
+            'button': '12px'
+          },
+          animation: {
+            bounceIn: 'bounceIn 0.8s ease-out both'
+          },
+          keyframes: {
+            bounceIn: {
+              '0%': { transform: 'scale(0.8)', opacity: '0' },
+              '60%': { transform: 'scale(1.05)', opacity: '1' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+    }
+    .skill-badge {
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #e0f2fe;
+      backdrop-filter: blur(6px);
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      margin: 0.5rem;
+      animation: bounceIn 0.8s ease-out both;
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 left-0 right-0 bg-secondary/90 z-50 border-b border-blue-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <a href="#" class="text-2xl font-['Pacifico'] text-accent">🧑‍💻 Aryan Patel</a>
+        <div class="flex items-center space-x-8 text-blue-100">
+          <a href="#about" class="hover:text-accent">About</a>
+          <a href="#projects" class="hover:text-accent">Projects</a>
+          <a href="#skills" class="hover:text-accent">Skills</a>
+          <a href="#contact" class="hover:text-accent">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20 min-h-screen flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-5xl font-extrabold bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
+      Aryan Patel
+    </h1>
+    <h2 class="text-xl text-blue-200 mt-4">Master’s Student in Computer Science 🧠</h2>
+    <p class="text-md max-w-xl mt-6 text-blue-300">
+      Passionate about game development, real-time systems, and performance-critical software. Skilled in C++, C#, and low-level system programming with a strong foundation in design patterns and scalable architectures.
+    </p>
+    <div class="flex space-x-4 mt-8">
+      <a href="#projects" class="bg-primary text-white px-6 py-2 rounded-button font-semibold hover:bg-primary/80 transition-all">View Projects</a>
+      <a href="#contact" class="text-primary border border-primary px-6 py-2 rounded-button font-semibold hover:bg-primary/10 transition-all">Contact Me</a>
+    </div>
+  </main>
+
+  <section id="skills" class="py-20 bg-black text-white">
+    <h2 class="text-4xl font-extrabold text-center mb-16 text-blue-100 tracking-wide">🛠 Technical Skills</h2>
+  
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+      
+      <!-- CATEGORY CARD -->
+      <div class="bg-gradient-to-br from-secondary to-primary/40 p-6 rounded-2xl shadow-lg backdrop-blur-md transition-all hover:scale-[1.015]">
+        <h3 class="text-xl font-semibold text-accent mb-4">👇 Core Languages & Low-Level</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">C++</span>
+          <span class="skill-badge">C#</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">Memory Management</span>
+          <span class="skill-badge">Heap Allocation</span>
+          <span class="skill-badge">Pointer Systems</span>
+          <span class="skill-badge">Multithreading</span>
+          <span class="skill-badge">Atomic Ops</span>
+          <span class="skill-badge">Locks</span>
+          <span class="skill-badge">Queues</span>
+        </div>
+      </div>
+  
+      <!-- Real-Time & Systems -->
+      <div class="bg-gradient-to-br from-primary to-secondary/60 p-6 rounded-2xl shadow-lg backdrop-blur-md transition-all hover:scale-[1.015]">
+        <h3 class="text-xl font-semibold text-accent mb-4">⚙️ Real-Time & Systems</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">Real-Time Systems</span>
+          <span class="skill-badge">Architecture Design</span>
+          <span class="skill-badge">Low-Latency Scheduling</span>
+          <span class="skill-badge">XAudio2</span>
+          <span class="skill-badge">Graphics Engine Dev</span>
+          <span class="skill-badge">Scene Graphs</span>
+          <span class="skill-badge">OpenGL</span>
+          <span class="skill-badge">Custom STL</span>
+          <span class="skill-badge">Aligned Memory</span>
+          <span class="skill-badge">File Systems</span>
+          <span class="skill-badge">Object Pools</span>
+        </div>
+      </div>
+  
+      <!-- Design Patterns -->
+      <div class="bg-gradient-to-br from-accent/20 to-primary/40 p-6 rounded-2xl shadow-lg backdrop-blur-md transition-all hover:scale-[1.015]">
+        <h3 class="text-xl font-semibold text-accent mb-4">🧱 Design Patterns & Architecture</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">Command</span>
+          <span class="skill-badge">Observer</span>
+          <span class="skill-badge">Composite</span>
+          <span class="skill-badge">Proxy</span>
+          <span class="skill-badge">Visitor</span>
+          <span class="skill-badge">State</span>
+          <span class="skill-badge">UML</span>
+          <span class="skill-badge">Callback Tunneling</span>
+          <span class="skill-badge">Data-Driven Messaging</span>
+        </div>
+      </div>
+  
+      <!-- Game Dev -->
+      <div class="bg-gradient-to-br from-secondary to-blue-900 p-6 rounded-2xl shadow-lg backdrop-blur-md transition-all hover:scale-[1.015]">
+        <h3 class="text-xl font-semibold text-accent mb-4">🎮 Game & Engine Dev</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">Unity</span>
+          <span class="skill-badge">Unreal Engine</span>
+          <span class="skill-badge">Game Loops</span>
+          <span class="skill-badge">Sprite Systems</span>
+          <span class="skill-badge">Animation Frameworks</span>
+        </div>
+      </div>
+  
+      <!-- AI/ML -->
+      <div class="bg-gradient-to-br from-[#1e3a8a] to-[#3b82f6]/40 p-6 rounded-2xl shadow-lg backdrop-blur-md transition-all hover:scale-[1.015]">
+        <h3 class="text-xl font-semibold text-accent mb-4">🧠 AI & ML</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">Machine Learning</span>
+          <span class="skill-badge">Artificial Intelligence I</span>
+          <span class="skill-badge">Flask</span>
+          <span class="skill-badge">Scikit-learn</span>
+          <span class="skill-badge">Data Analysis</span>
+        </div>
+      </div>
+  
+      <!-- Dev Tools -->
+      <div class="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl shadow-lg backdrop-blur-md transition-all hover:scale-[1.015]">
+        <h3 class="text-xl font-semibold text-accent mb-4">☁️ Dev Tools & Infra</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-badge">Git</span>
+          <span class="skill-badge">Perforce</span>
+          <span class="skill-badge">Visual Studio</span>
+          <span class="skill-badge">Xcode</span>
+          <span class="skill-badge">AWS</span>
+          <span class="skill-badge">Scripting</span>
+          <span class="skill-badge">gRPC</span>
+          <span class="skill-badge">SQLite</span>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <section id="education" class="py-20">
+    <h2 class="text-4xl font-extrabold text-center mb-16 text-white tracking-wide">📘 Education</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+      <!-- DePaul University -->
+      <div class="bg-gradient-to-br from-primary to-secondary p-6 rounded-2xl shadow-2xl transform transition-transform hover:scale-105">
+        <h3 class="text-2xl font-bold text-white mb-2">DePaul University</h3>
+        <p class="text-blue-200 mb-1">📍 Chicago, IL, USA</p>
+        <p class="text-blue-300 italic text-sm">Master’s in Computer Science (Sept 2023 – Present)</p>
+        <p class="text-blue-400 text-sm mb-3">GPA: 3.3 / 4.0</p>
+        <div>
+          <p class="text-white font-semibold mb-1">🔑 Key Courses:</p>
+          <ul class="text-sm space-y-2" x-data="{ open: null }">
+            <li>
+              <button @click="open === 1 ? open = null : open = 1"
+                      class="w-full text-left text-blue-100 font-medium hover:text-white">
+                ▶️ Optimized C++
+              </button>
+              <div x-show="open === 1" x-transition class="ml-4 text-blue-300 mt-1">
+                Learned how to write high-performance C++ code by implementing a custom memory allocator from scratch, understanding how memory layout and CPU caching impact performance. Gained experience with STL internals, data locality (hot/cold struct separation), and practical profiling/debugging using Visual Studio. Most learning came from building and breaking real systems — not just slides.
+            </div>
+            </li>
+            <li>
+                <button @click="open === 2 ? open = null : open = 2"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Architecture of Real-Time Systems
+                </button>
+                <div x-show="open === 2" x-transition class="ml-4 text-blue-300 mt-1">
+                    Built a real-time 2D game engine in C# by implementing 10+ design patterns like Command, Observer, Proxy, Composite, Visitor, and State. Learned real-time software architecture through deep hands-on development of a modular, data-driven Space Invaders clone using Visual Studio and Perforce. Applied performance tuning, system abstraction, object pooling, animation systems, collision frameworks, and real-time scheduling logic to build a fully functioning, feature-complete game. Course emphasized iterative development, continuous integration, UML-based design, and software engineering principles applied to game systems.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 3 ? open = null : open = 3"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Real-Time Multithreaded Architecture
+                </button>
+                <div x-show="open === 3" x-transition class="ml-4 text-blue-300 mt-1">
+                    Developed a multithreaded real-time audio engine in C++ from scratch. Gained hands-on experience with thread coordination, circular queues, lock-free data structures, and asynchronous loading. Designed systems for inter-thread messaging, custom resource Handles, and dynamic callback management. Applied design patterns like Command and Observer in a multi-threaded context using XAudio2 and Perforce.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 4 ? open = null : open = 4"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Real-Time Software Development I
+                </button>
+                <div x-show="open === 4" x-transition class="ml-4 text-blue-300 mt-1">
+                    Built a modular real-time graphics engine in C++ from the ground up. Implemented core systems for memory, file I/O, math, and object hierarchies, followed by graphics modules (VAOs, shaders, scene graph, textures, camera). Designed aligned multi-heap memory management and integrated everything using iterative development and custom debugging tools. Focused heavily on system architecture and performance.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 5 ? open = null : open = 5"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Distributed Systems I
+                </button>
+                <div x-show="open === 5" x-transition class="ml-4 text-blue-300 mt-1">
+                  Focused on memory-efficient programming in C++, using STL, move semantics, and advanced performance tricks.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 6 ? open = null : open = 6"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Applied Algorithms and Structures
+                </button>
+                <div x-show="open === 6" x-transition class="ml-4 text-blue-300 mt-1">
+                  Focused on memory-efficient programming in C++, using STL, move semantics, and advanced performance tricks.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 7 ? open = null : open = 7"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Mobile Application Development for iOS
+                </button>
+                <div x-show="open === 7" x-transition class="ml-4 text-blue-300 mt-1">
+                  Focused on memory-efficient programming in C++, using STL, move semantics, and advanced performance tricks.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 8 ? open = null : open = 8"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Artificial Intelligence I
+                </button>
+                <div x-show="open === 8" x-transition class="ml-4 text-blue-300 mt-1">
+                  Focused on memory-efficient programming in C++, using STL, move semantics, and advanced performance tricks.
+                </div>
+              </li>
+              <li>
+                <button @click="open === 9 ? open = null : open = 9"
+                        class="w-full text-left text-blue-100 font-medium hover:text-white">
+                  ▶️ Principles of Database Management Systems
+                </button>
+                <div x-show="open === 9" x-transition class="ml-4 text-blue-300 mt-1">
+                  Focused on memory-efficient programming in C++, using STL, move semantics, and advanced performance tricks.
+                </div>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+  
+      <!-- PDEU -->
+      <div class="bg-gradient-to-br from-secondary to-primary p-6 rounded-2xl shadow-2xl transform transition-transform hover:scale-105">
+        <h3 class="text-2xl font-bold text-white mb-2">Pandit Deendayal Energy University</h3>
+        <p class="text-blue-200 mb-1">📍 Gujarat, IN</p>
+        <p class="text-blue-300 italic text-sm">B.Tech in ICT (Aug 2018 – May 2022)</p>
+        <p class="text-blue-400 text-sm mb-3">GPA: 9.11 / 10.00</p>
+        <div>
+          <p class="text-white font-semibold mb-1">🔑 Key Courses:</p>
+          <ul class="list-disc ml-6 text-blue-100 text-sm space-y-1">
+            <li>Data Structures and Algorithms</li>
+            <li>Operating Systems</li>
+            <li>Web Development</li>
+            <li>Object-Oriented Programming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
