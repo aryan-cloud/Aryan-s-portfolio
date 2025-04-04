@@ -23,16 +23,24 @@
           borderRadius: {
             'button': '12px'
           },
+          
           animation: {
-            bounceIn: 'bounceIn 0.8s ease-out both'
+            bounceIn: 'bounceIn 0.8s ease-out both',
+            float: 'floatGlobe 3.5s ease-in-out infinite'
           },
           keyframes: {
             bounceIn: {
               '0%': { transform: 'scale(0.8)', opacity: '0' },
               '60%': { transform: 'scale(1.05)', opacity: '1' },
               '100%': { transform: 'scale(1)', opacity: '1' },
-            }
+            },
+            float: {
+            '0%, 100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-10px)' }
           }
+          }
+
+          
         }
       }
     }
@@ -86,6 +94,34 @@
       <a href="#contact" class="text-primary border border-primary px-6 py-2 rounded-button font-semibold hover:bg-primary/10 transition-all">Contact Me</a>
     </div>
   </main>
+
+  
+  <section class="mt-28 relative flex flex-col items-center justify-center text-center px-4">
+  <h2 class="text-5xl font-extrabold text-blue-100 mb-16 tracking-wide">📚 Engineering Wisdom</h2>
+
+  <div class="relative w-[400px] h-[500px] mx-auto mb-16 animate-float">
+    <!-- SVG Canvas for Triangle -->
+    
+    <!-- Design Circle -->
+    <div class="absolute w-[200px] h-[200px] bg-orange-400 opacity-70 rounded-full left-[30px] top-[100px] z-10 flex items-center justify-center">
+      <span class="text-black font-bold text-center text-sm px-2">Design & Architecture</span>
+    </div>
+
+    <!-- Language Circle -->
+    <div class="absolute w-[200px] h-[200px] bg-yellow-300 opacity-70 rounded-full right-[30px] top-[100px] z-10 flex items-center justify-center">
+      <span class="text-black font-bold text-center text-sm">Language</span>
+    </div>
+
+    <!-- Process Circle -->
+    <div class="absolute w-[200px] h-[200px] bg-teal-400 opacity-70 rounded-full left-[100px] top-[230px] z-10 flex items-center justify-center">
+      <span class="text-black font-bold text-center text-sm">Process</span>
+    </div>
+  </div>
+</section>
+
+
+
+  
 
   <section id="skills" class="py-20 bg-black text-white">
     <h2 class="text-4xl font-extrabold text-center mb-16 text-blue-100 tracking-wide">🛠 Technical Skills</h2>
@@ -185,6 +221,135 @@
     </div>
   </section>
   
+
+  <section id="projects" class="py-24 bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
+    <h2 class="text-4xl font-extrabold text-center mb-16 text-blue-100 tracking-wide">🚀 Featured Projects</h2>
+  
+    <div class="max-w-6xl mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6">
+  
+
+
+       <!-- Graphics Engine -->
+    <div class="bg-[#1e293b] rounded-2xl p-6 shadow-xl border border-blue-800 hover:scale-105 transition-transform duration-300">
+      <div class="flex items-center space-x-4 mb-4">
+        <i class="ri-settings-2-line text-3xl text-accent"></i>
+        <h3 class="text-xl font-semibold text-blue-100">Graphics Engine in C++</h3>
+      </div>
+      <p class="text-blue-300 mb-4 text-sm leading-relaxed">
+        Constructed a real-time graphics engine using DirectX11 with custom memory, math, and file systems. Includes shader-based rendering, transformation pipelines, and scene graph support.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="skill-badge">C++</span>
+        <span class="skill-badge">DirectX11</span>
+        <span class="skill-badge">Scene Graph</span>
+        <span class="skill-badge">Real-Time Systems</span>
+      </div>
+    </div>
+
+    <!-- Audio Engine -->
+    <div class="bg-[#1e293b] rounded-2xl p-6 shadow-xl border border-blue-800 hover:scale-105 transition-transform duration-300">
+      <div class="flex items-center space-x-4 mb-4">
+        <i class="ri-volume-up-line text-3xl text-accent"></i>
+        <h3 class="text-xl font-semibold text-blue-100">Multithreaded Audio Engine</h3>
+      </div>
+      <p class="text-blue-300 mb-4 text-sm leading-relaxed">
+        Developed a C++ audio engine with asynchronous loading, thread-safe messaging, command tunneling, and cross-thread callback handling using XAudio2.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="skill-badge">C++</span>
+        <span class="skill-badge">XAudio2</span>
+        <span class="skill-badge">Threading</span>
+        <span class="skill-badge">Real-Time</span>
+      </div>
+    </div>
+      <!-- Project Card -->
+      <div class="bg-[#1e293b] rounded-2xl p-6 shadow-xl border border-blue-800 hover:scale-105 transition-transform duration-300">
+        <div class="flex items-center space-x-4 mb-4">
+          <i class="ri-gamepad-line text-3xl text-accent"></i>
+          <h3 class="text-xl font-semibold text-blue-100">Space Invaders</h3>
+        </div>
+        <p class="text-blue-300 mb-4 text-sm leading-relaxed">
+          A real-time C# game engine featuring 10+ design patterns, bomb logic, collision detection, animated states, round progression, and audio sync.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="skill-badge">C#</span>
+          <span class="skill-badge">Game Loop</span>
+          <span class="skill-badge">Design Patterns</span>
+          <span class="skill-badge">Perforce</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://youtu.be/zfRrIUzsXG8" target="_blank" class="text-primary hover:text-accent text-sm font-semibold">🔗 Demo</a>
+          <a href="https://github.com/aryan-cloud/Space-Invaders" target="_blank" class="text-primary hover:text-accent text-sm font-semibold">📁 GitHub</a>
+
+        </div>
+      </div>
+
+
+       <!-- Distributed File Engine -->
+    <div class="bg-[#1e293b] rounded-2xl p-6 shadow-xl border border-blue-800 hover:scale-105 transition-transform duration-300">
+      <div class="flex items-center space-x-4 mb-4">
+        <i class="ri-share-forward-line text-3xl text-accent"></i>
+        <h3 class="text-xl font-semibold text-blue-100">Distributed File Engine</h3>
+      </div>
+      <p class="text-blue-300 mb-4 text-sm leading-relaxed">
+        Built a distributed file retrieval system in C++ using gRPC and multithreading. Designed custom indexing, hash-based lookup, and directory scanning with high concurrency.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="skill-badge">C++</span>
+        <span class="skill-badge">gRPC</span>
+        <span class="skill-badge">Multithreading</span>
+        <span class="skill-badge">Distributed Systems</span>
+      </div>
+    </div>
+
+  
+      <!-- Project 2 -->
+      <div class="bg-[#1e293b] rounded-2xl p-6 shadow-xl border border-blue-800 hover:scale-105 transition-transform duration-300">
+        <div class="flex items-center space-x-4 mb-4">
+          <i class="ri-cpu-line text-3xl text-accent"></i>
+          <h3 class="text-xl font-semibold text-blue-100">Custom STL Library</h3>
+        </div>
+        <p class="text-blue-300 mb-4 text-sm leading-relaxed">
+          A hand-crafted STL alternative in C++ using doubly linked lists, hot/cold node layout, and custom memory management supporting malloc/free.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="skill-badge">C++</span>
+          <span class="skill-badge">Allocator</span>
+          <span class="skill-badge">Memory Systems</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-primary hover:text-accent text-sm font-semibold">📁 GitHub</a>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="bg-[#1e293b] rounded-2xl p-6 shadow-xl border border-blue-800 hover:scale-105 transition-transform duration-300">
+        <div class="flex items-center space-x-4 mb-4">
+          <i class="ri-brain-line text-3xl text-accent"></i>
+          <h3 class="text-xl font-semibold text-blue-100">PR Misinformation Detector</h3>
+        </div>
+        <p class="text-blue-300 mb-4 text-sm leading-relaxed">
+          ML pipeline to identify PR-driven fake engagement and bot activity across Instagram/Twitter. Combines fake metrics, hate spread, and anomaly analysis.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">Scikit-learn</span>
+          <span class="skill-badge">Classification</span>
+          <span class="skill-badge">Social Media Analysis</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://github.com/aryan-cloud/Fake-News-Marketing-Detection"  target="_blank"  class="text-primary hover:text-accent text-sm font-semibold">📁 GitHub</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+
+
   <section id="education" class="py-20">
     <h2 class="text-4xl font-extrabold text-center mb-16 text-white tracking-wide">📘 Education</h2>
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
